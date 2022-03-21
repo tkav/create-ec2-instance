@@ -1,9 +1,11 @@
 
 # Create EC2 Instance
 
-Create a quick EC2 instance with SSH access using terraform via global shortcuts.
+Quickly create an EC2 instance with SSH access using Terraform via global shortcuts.
 
-Most of the time for testing I just need an EC2 instance with SSH access from my IP. 
+![Demo](demo.gif)
+
+Create an EC2 instance with SSH access from your IP (or custom Terraform) using global shortcuts.
 
 When setup, all that's needed to create a new instance is `create-ec2`, login with `ec2-login` and destroy with `destroy-ec2`.
 
@@ -105,6 +107,7 @@ This will not prompt for confirmation.
 - AWS credentials set in terminal
 - Terraform
 - jq (For SSH command update in [`ec2-login.sh`](ec2-login.sh))
+- Key name must already exist
 
 # Notes
 
