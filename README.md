@@ -63,6 +63,8 @@ create-ec2
 ```
 Default values will be presented. Hit enter to confirm default values or set a new value.
 
+Optinally run with an argument to use default values (eg. `create-ec2 1`).
+
 ### ec2-login
 
 Run using:
