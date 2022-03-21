@@ -13,13 +13,22 @@ You could assign the `create-ec2` command as a [hotkey](#Hotkey) to create a new
 
 # Setup
 
-- Clone and open repo
-- Edit `variables.sh` with default values
-- Set execute permissions on scripts:
+Clone and open repo:
+```
+git clone https://github.com/tkav/create-ec2-instance && cd create-ec2-instance
+```
+
+Edit `variables.sh` with default values:
+```
+nano variables.sh
+```
+
+Set execute permissions on scripts:
 ```
 sudo chmod 700 create-ec2.sh && chmod 700 ec2-login.sh && chmod 700 destroy-ec2.sh
 ```
-- Create a new alias to execute the scripts to either `~/.bashrc`:
+
+Create a new alias to execute the scripts to either `~/.bashrc`:
 ```
 echo alias create-ec2=$PWD/create-ec2.sh >> ~/.bashrc
 echo alias ec2-login=$PWD/ec2-login.sh >> ~/.bashrc
@@ -31,7 +40,8 @@ echo alias create-ec2=$PWD/create-ec2.sh >> ~/.zshrc
 echo alias ec2-login=$PWD/ec2-login.sh >> ~/.zshrc
 echo alias destroy-ec2=$PWD/destroy-ec2.sh >> ~/.zshrc
 ```
-- Now `create-ec2`, `ec2-login` and `destroy-ec2` can be run globally in your terminal.
+
+Open a new terminal. Now `create-ec2`, `ec2-login` and `destroy-ec2` can be run globally in your terminal.
 
 ### Hotkey
 
@@ -64,6 +74,12 @@ create-ec2
 Default values will be presented. Hit enter to confirm default values or set a new value.
 
 Optinally run with an argument to use default values (eg. `create-ec2 1`).
+
+1 x EC2 instance with the specified AMI, instance size and key-pair name
+
+1 x Security group will created and assigned to the EC2 instance
+
+- SSH (port 22) access from your IP Address is allowed
 
 ### ec2-login
 
