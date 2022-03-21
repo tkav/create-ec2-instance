@@ -26,7 +26,7 @@ save_outputs:
 .PHONY: process_outputs
 process_outputs:
 	echo '#!/bin/bash' > ec2-login.sh
-	cat outputs.json | ~/homebrew/bin/jq -r '(.ssh_info.value)' >> ec2-login.sh
+	cat outputs.json | jq -r '(.ssh_info.value)' >> ec2-login.sh
 
 .PHONY: apply
 apply:
