@@ -67,15 +67,25 @@ Now you can create an instance using the shortcut.
 
 ## Commands
 
-### create-ec2
+After following the setup instructions above, run these from anywhere in your terminal.
 
-Run using:
-```
-create-ec2
-```
+<br />
+
+### `create-ec2`
+
 Default values will be presented. Hit enter to confirm default values or set a new value.
 
-Optinally run with an argument to use default values (eg. `create-ec2 1`).
+Input Values:
+
+`project_name` - Name of your instance and Project tag on resources
+
+`key_name` - Name of your SSH key-pair (that already exists on AWS)
+
+`ami` - AMI to use for EC2 instance.
+
+`instance_size` - EC2 Instance type
+
+Optionally run with an argument to use default values (eg. `create-ec2 1`).
 
 Executes Terraform to creates:
 - 1 x EC2 instance with the specified AMI, instance size and key-pair name
@@ -84,23 +94,21 @@ Executes Terraform to creates:
 
     - SSH (port 22) access from your IP Address is allowed
 
-### ec2-login
+<br />
 
-Run using:
-```
-ec2-login
-```
+### `ec2-login`
+
 Attempts to SSH into the newly created user with the public DNS and key name specified.
 SSH Key is expected at `~/.ssh/key_name.pem`.
 Login name is expected to be `ec2-user`.
 
-### destroy_ec2
+<br />
 
-Destroy using:
-```
-destroy_ec2
-```
+### `destroy_ec2`
+
 This will not prompt for confirmation.
+
+<br />
 
 # Requirements
 
