@@ -75,11 +75,12 @@ Default values will be presented. Hit enter to confirm default values or set a n
 
 Optinally run with an argument to use default values (eg. `create-ec2 1`).
 
-1 x EC2 instance with the specified AMI, instance size and key-pair name
+Executes Terraform to creates:
+- 1 x EC2 instance with the specified AMI, instance size and key-pair name
 
-1 x Security group will created and assigned to the EC2 instance
+- 1 x Security group will created and assigned to the EC2 instance
 
-- SSH (port 22) access from your IP Address is allowed
+    - SSH (port 22) access from your IP Address is allowed
 
 ### ec2-login
 
